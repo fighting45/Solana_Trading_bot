@@ -1,0 +1,23 @@
+{
+  "name": "my-intern-web3-project",
+  "version": "1.0.0",
+  "description": "Objective: Build a JavaScript/TypeScript-based tool that interacts with the Solana blockchain and Raydium DEX to monitor token prices and market caps, and automatically trigger buy orders when certain market cap thresholds are met. Additionally, expose data via REST API endpoints using FastAPI or Node.js frameworks.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@raydium-io/raydium-sdk-v2": "^0.1.140-alpha",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "bs58": "^6.0.0",
+    "decimal.js": "^10.5.0",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,23 @@
+// const poolData = {
+//     name: 'WSOL/USDC',
+//     pair_id: 'So11111111111111111111111111111111111111112-EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+//     lp_mint: 'ArPinjxPiPJMeZpJgJCkguiJws42uefPtHz6QbUS44an',
+//     official: false,
+//     liquidity: 8.360946452486395,
+//     market: 'DowK5fQr3qyRYeRFmGojU7obbh8iEgCzk3967JN1Wc4c',
+//     volume_24h: 0.4764739733615522,
+//     volume_24h_quote: 0.48111331863425927,
+//     fee_24h: 0.0011911849334038803,
+//     fee_24h_quote: 0.0005564011655960648,
+//     volume_7d: 8.84016431515591,
+//     volume_7d_quote: 9.075973166122688,
+//     fee_7d: 0.02210041078788978,
+//     fee_7d_quote: 0.01145018445943287,
+//     price: 148.77759921506993,
+//     lp_price: 1031.5952533342474,
+//     amm_id: 'S2MiN5qmiRS8HBQMXcdJUhLwrBgX9P3naDuo4GkQ63t',
+//     token_amount_coin: 0.02800759,
+//     token_amount_pc: 4.166902,
+//     token_amount_lp: 0.008104871,
+//     apy: 13.74
+// }

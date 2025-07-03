@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2025-07-03T06:26:29.848Z",
+    "symbol": "SOL",
+    "price": 154.86826501780837,
+    "marketcap": 82813260387.93192,
+    "threshold": 70000000000,
+    "action": "BUY"
+  },
+  {
+    "timestamp": "2025-07-03T06:31:26.911Z",
+    "symbol": "SOL",
+    "price": 154.86826501780837,
+    "marketcap": 82813260387.93192,
+    "threshold": 70000000000,
+    "action": "BUY"
+  },
+  {
+    "timestamp": "2025-07-03T07:11:52.528Z",
+    "symbol": "SOL",
+    "price": 154.86826501780837,
+    "marketcap": 82813256076.4362,
+    "threshold": 70000000000,
+    "action": "BUY"
+  },
+  {
+    "timestamp": "2025-07-03T09:31:01.978Z",
+    "symbol": "SOL",
+    "price": 154.86826501780837,
+    "marketcap": 82813164536.02986,
+    "threshold": 70000000000,
+    "action": "BUY"
+  }
+]

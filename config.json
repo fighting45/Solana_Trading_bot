@@ -1,0 +1,6 @@
+{
+  "desiredPair": "SOL/USDC",
+  "baseTokenName": "solana",
+  "quoteToken": "USDC",
+  "MARKET_CAP_THRESHOLD": 70000000000
+}

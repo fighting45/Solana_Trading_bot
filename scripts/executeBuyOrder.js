@@ -2,6 +2,9 @@ import { swap } from "./swap.js"
 import { calculateMarketCap } from "./trackPrices.js";
 import { MARKET_CAP_THRESHOLD } from "../config.js"
 import { logTrade } from "./logTrade.js";
+import { desiredPair } from "../config.js"
+
+const [symbol,] = desiredPair.split('/')
 
 
 export async function monitorAndSwap() {
@@ -15,7 +18,7 @@ export async function monitorAndSwap() {
         console.log(`✅Swap executed successfully!`)
 
         logTrade({
-            symbol: 'SOL',
+            symbol: symbol,
             price: pool.price,
             marketcap: marketcap,
             threshold: MARKET_CAP_THRESHOLD,

@@ -1,6 +1,6 @@
 {
-  "desiredPair": "SOL/USDC",
-  "baseTokenName": "solana",
+  "desiredPair": "BONK/USDC",
+  "baseTokenName": "bonk",
   "quoteToken": "USDC",
   "MARKET_CAP_THRESHOLD": 70000000000
 }

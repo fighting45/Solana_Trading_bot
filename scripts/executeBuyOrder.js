@@ -4,7 +4,7 @@ import { MARKET_CAP_THRESHOLD } from "../config.js"
 import { logTrade } from "./logTrade.js";
 
 
-async function monitorAndSwap() {
+export async function monitorAndSwap() {
     const { marketcap, pool } = await calculateMarketCap();
     console.log(`⚠️ Current Solana Market Cap: $${marketcap}`);
     console.log(`🟡 Threshold Maket cap is $${MARKET_CAP_THRESHOLD}`);

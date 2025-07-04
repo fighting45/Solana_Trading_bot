@@ -2,6 +2,7 @@
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
+import cors from 'cors';
 import { spawn } from 'child_process';
 
 const app = express();
@@ -10,6 +11,7 @@ const LOG_PATH = path.resolve('db/trade_logs.json');
 const CONFIG_PATH = path.resolve('config.json');
 
 app.use(express.json());
+app.use(cors());
 app.use(express.static(path.resolve('./frontend'))); // Serve your index.html
 
 function readLogs() {
@@ -65,7 +67,7 @@ app.post('/start-trade', (req, res) => {
     fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2));
     console.log('✅ Config updated. Starting trading bot...');
 
-    const child = spawn('node', ['scripts/monitorAndSwap.js'], {
+    const child = spawn('node', ['scripts/executeBuyOrder.js'], {
         stdio: 'inherit'
     });
 

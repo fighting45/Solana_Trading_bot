@@ -164,6 +164,14 @@
         <div class="header">
             <h1>🚀 Web3 Trading Bot Dashboard</h1>
             <p>Solana Token Monitoring & Automated Trading System</p>
+            <button id="connect-btn"
+                style="margin-top: 15px; padding: 10px 20px; font-weight: bold; border: none; border-radius: 8px; background-color: #ffb347; color: white; cursor: pointer;">
+                🔐 Connect Wallet
+            </button>
+            <div id="wallet-address" style="margin-top: 10px; font-size: 0.9rem; color: #eee;">
+                Wallet: Not connected
+            </div>
+
             <div style="margin-top: 15px;">
                 <span class="status-indicator" id="serverStatus"></span>
                 <span id="serverStatusText">Checking server status...</span>
@@ -342,6 +350,40 @@ node api/server.js
         });
 
     </script>
+    <!-- Solana web3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.95.1/lib/index.iife.min.js"></script>
+
+    <script>
+        const connectBtn = document.getElementById('connect-btn');
+        const walletAddrText = document.getElementById('wallet-address');
+
+        connectBtn.onclick = async () => {
+            if ('solana' in window) {
+                const provider = window.solana;
+
+                try {
+                    const resp = await provider.connect();
+                    const wallet = resp.publicKey.toString();
+
+                    walletAddrText.textContent = 'Wallet: ' + wallet;
+
+                    // OPTIONAL: Send to your backend
+                    await fetch('http://localhost:3000/user-wallet', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ wallet })
+                    });
+
+                } catch (err) {
+                    console.error('❌ Wallet connection failed:', err);
+                    alert('Wallet connection failed');
+                }
+            } else {
+                alert('⚠️ Please install Phantom Wallet extension');
+            }
+        };
+    </script>
+
 </body>
 
 </html>

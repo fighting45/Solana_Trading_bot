@@ -74,6 +74,14 @@ app.post('/start-trade', (req, res) => {
     return res.json({ status: 'Bot started with updated config', config });
 });
 
+app.post('/user-wallet', (req, res) => {
+    const { wallet } = req.body;
+    console.log(`🔗 Wallet connected: ${wallet}`);
+    res.json({ success: true });
+});
+
+
+
 app.listen(PORT, () => {
     console.log(`🚀 API server is running at http://localhost:${PORT}`);
 });

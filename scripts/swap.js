@@ -1,10 +1,7 @@
 
 import { connection, initSdk, owner, txVersion } from '../config.js'
 import BN from 'bn.js'
-import Decimal from 'decimal.js'
-import { PublicKey } from '@solana/web3.js'
 import { getRaydiumPools } from './trackPrices.js'
-import bs58 from "bs58"
 import { NATIVE_MINT } from '@solana/spl-token'
 
 
@@ -65,7 +62,7 @@ export const swap = async () => {
 
     const { blockhash } = await connection.getLatestBlockhash("finalized");
     transaction.message.recentBlockhash = blockhash;
-    //Simulation on mainnet
+
     const sim = await connection.simulateTransaction(transaction);
     console.log('📝 The simulation is completed:', sim);
     if (sim.err) {
@@ -73,3 +70,4 @@ export const swap = async () => {
     }
 
 }
+// swap();
